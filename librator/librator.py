@@ -16,7 +16,7 @@ def main(clargs=None):
                         help="Unpack existing library")
     args = parser.parse_args(clargs)
 
-    if not exists(args.cards):
+    if not exists(dirname(args.cards)):
         print("cards directory not found!")
         return None
     if not exists(args.library):
