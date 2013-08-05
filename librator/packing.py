@@ -25,7 +25,7 @@ def unpack(library, carddir):
     lib = Library(library)
     cardpath = pjoin(carddir, "{0}.crd")
 
-    for code in lib.retreive_all():
+    for code, _ in lib.filter_search():
         card = lib.load_card(code)
 
         with open(cardpath.format(code)) as cardfile:
