@@ -1,3 +1,4 @@
+"""Command line entry points."""
 from argparse import ArgumentParser
 from os.path import splitext, exists, dirname
 from .packing import pack, unpack

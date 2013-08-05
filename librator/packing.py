@@ -1,3 +1,4 @@
+"""Implementation of packing and unpacking functions."""
 import yaml
 from glob import glob
 from os.path import pjoin
@@ -7,7 +8,7 @@ from librarian.library import Library
 
 def pack(library, carddir):
     """Pack all ``.crd`` card files in the carddir into the given library."""
-    lib = Library(Library)
+    lib = Library(library)
 
     for cardpath in glob(pjoin(carddir, "*.crd")):
         # Open card file and load it with yaml
@@ -21,7 +22,7 @@ def pack(library, carddir):
 
 def unpack(library, carddir):
     """Unpack all cards from the given library into carddir as .crd files."""
-    lib = Library(Library)
+    lib = Library(library)
     cardpath = pjoin(carddir, "{0}.crd")
 
     for code in lib.retreive_all():
