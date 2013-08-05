@@ -1,7 +1,7 @@
 """Implementation of packing and unpacking functions."""
 import yaml
 from glob import glob
-from os.path import pjoin
+from os.path import join as pjoin
 from librarian.card import Card
 from librarian.library import Library
 
