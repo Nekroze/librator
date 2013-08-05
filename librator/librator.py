@@ -1,5 +1,7 @@
 from argparse import ArgumentParser
-from os.path import splitext
+from os.path import splitext, exists, dirname
+from .pack import pack
+from .unpack import unpack
 
 
 def main(clargs=None):
@@ -10,9 +12,21 @@ def main(clargs=None):
                         help="Directory of single .crd card files")
     parser.add_argument("library", type=str,
                         help="Library database file")
-    parser.add_argument("-u", "--unpack", action="store_true",
+    parser.add_argument("-u", "--unpack", action="store_true", default=False,
                         help="Unpack existing library")
     args = parser.parse_args(clargs)
+
+    if not exists(dirname(args.cards)):
+        print("cards directory not found!")
+        return None
+    if not exists(args.library):
+        print("library database not found!")
+        return None
+
+    if args.unpack:
+        unpack(args.library, args.cards)
+    else:
+        pack(args.library, args.cards)
 
 
 CARDTEMPLATE = """
