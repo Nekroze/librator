@@ -1,3 +1,5 @@
+*.crd
+
 *.py[cod]
 
 # C extensions
