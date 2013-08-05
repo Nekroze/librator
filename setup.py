@@ -28,6 +28,12 @@ setup(
     packages=[
         'librator',
     ],
+    entry_points={
+        'console_scripts': [
+            'librator = librator.librator:main',
+            'libratorcard = librator.librator:cardmain',
+            ]
+    },
     package_dir={'librator': 'librator'},
     include_package_data=True,
     install_requires=[
