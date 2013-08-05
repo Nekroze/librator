@@ -1,0 +1,36 @@
+=============================
+Librator
+=============================
+
+.. image:: https://badge.fury.io/py/librator.png
+    :target: http://badge.fury.io/py/librator
+    
+.. image:: https://travis-ci.org/Nekroze/librator.png?branch=master
+        :target: https://travis-ci.org/Nekroze/librator
+
+.. image:: https://pypip.in/d/librator/badge.png
+        :target: https://crate.io/packages/librator?version=latest
+
+
+A method of automatically constructing a Librarian library database from a directory of yaml files or the reverse.
+
+Documentation
+-------------
+
+The full documentation is at http://librator.rtfd.org.
+
+Quickstart
+----------
+
+Install Librator::
+
+    pip install librator
+
+Then use it in a project::
+
+	import librator
+
+Features
+--------
+
+* TODO
