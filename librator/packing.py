@@ -17,3 +17,15 @@ def pack(library, carddir):
         card = Card().load(carddict)
         # Save the card object to the library
         lib.save_card(card)
+
+
+def unpack(library, carddir):
+    """Unpack all cards from the given library into carddir as .crd files."""
+    lib = Library(Library)
+    cardpath = pjoin(carddir, "{0}.crd")
+
+    for code in lib.retreive_all():
+        card = lib.load_card(code)
+
+        with open(cardpath.format(code)) as cardfile:
+            yaml.dump(card.save(), cardfile, default_flow_style=False)

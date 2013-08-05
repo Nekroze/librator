@@ -1,7 +1,6 @@
 from argparse import ArgumentParser
 from os.path import splitext, exists, dirname
-from .pack import pack
-from .unpack import unpack
+from .packing import pack, unpack
 
 
 def main(clargs=None):
