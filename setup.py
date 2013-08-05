@@ -37,8 +37,8 @@ setup(
     package_dir={'librator': 'librator'},
     include_package_data=True,
     install_requires=[
-        'pyyaml>=3.10'
-        'librarian>=0.2.1'
+        'pyyaml>=3.10',
+        'librarian>=0.2.1',
     ],
     license="MIT",
     zip_safe=False,
