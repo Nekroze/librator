@@ -1,6 +1,7 @@
 """Command line entry points."""
 from argparse import ArgumentParser
 from os.path import splitext, exists, dirname
+from os import makedirs
 from .packing import pack, unpack
 
 
@@ -17,9 +18,12 @@ def main(clargs=None):
     args = parser.parse_args(clargs)
 
     if not exists(dirname(args.cards)):
-        print("cards directory not found!")
-        return None
-    if not exists(args.library):
+        if args.unpack:
+            makedirs(dirname(args.card))
+        else:
+            print("cards directory not found!")
+            return None
+    if args.unpack and not exists(args.library):
         print("library database not found!")
         return None
 

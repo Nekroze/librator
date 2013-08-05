@@ -9,6 +9,7 @@ from librarian.library import Library
 def pack(library, carddir):
     """Pack all ``.crd`` card files in the carddir into the given library."""
     lib = Library(library)
+    lib.create_db()
 
     for cardpath in glob(pjoin(carddir, "*.crd")):
         # Open card file and load it with yaml
