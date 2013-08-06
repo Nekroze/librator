@@ -2,12 +2,16 @@
 import yaml
 from glob import glob
 from os.path import join as pjoin
+import os
 from librarian.card import Card
 from librarian.library import Library
 
 
 def pack(library, carddir):
     """Pack all ``.crd`` card files in the carddir into the given library."""
+    if os.path.exists(library):
+        os.remove(library)
+
     lib = Library(library)
     lib.create_db()
 
@@ -23,6 +27,9 @@ def pack(library, carddir):
 
 def unpack(library, carddir):
     """Unpack all cards from the given library into carddir as .crd files."""
+    if not os.path.exists(carddir):
+        os.makedirs(carddir)
+
     lib = Library(library)
     cardpath = pjoin(carddir, "{0}.crd")
 

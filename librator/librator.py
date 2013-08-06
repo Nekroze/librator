@@ -58,5 +58,8 @@ def cardmain(clargs=None):
     filename, _ = splitext(args.cardfile)
     filename += ".crd"
 
+    if not exists(dirname(filename)):
+        makedirs(dirname(filename))
+
     with open(filename, "w") as cardfile:
         cardfile.write(CARDTEMPLATE.strip())
