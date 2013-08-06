@@ -26,9 +26,13 @@ Install Librator::
 
     pip install librator
 
-Then use it in a project::
+Then start creating cards with::
 
-	import librator
+    libratorcard cards/mycard
+
+When you have your directory of card files simple pack then up::
+
+    librator cards/ library.lbr
 
 Features
 --------
