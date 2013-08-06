@@ -3,6 +3,11 @@
 History
 -------
 
+v0.1.2
+++++++
+
+- Fix for creating a folder for new card templates.
+
 v0.1.1
 ++++++
 
