@@ -1,12 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-"""
-test_librator
-------------
-
-Tests for `librator` module.
-"""
+"""Tests for ``librator`` command line tool."""
 
 import os
 import shutil

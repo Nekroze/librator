@@ -37,4 +37,6 @@ When you have your directory of card files simple pack then up::
 Features
 --------
 
-* TODO
+* Turns a collection of yml based card files into a librarian card database.
+* Can turn a librarian card database into a directory of yml based card files.
+* Provides a tool for creating an empty example card file.

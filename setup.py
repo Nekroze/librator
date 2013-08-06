@@ -37,8 +37,8 @@ setup(
     package_dir={'librator': 'librator'},
     include_package_data=True,
     install_requires=[
-        'pyyaml>=3.10'
-        'librarian>=0.2.1'
+        'pyyaml>=3.10',
+        'librarian>=0.2.3',
     ],
     license="MIT",
     zip_safe=False,
@@ -53,5 +53,8 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
     ],
-    test_suite='tests',
+    tests_require=[
+        'nose>=1.3.0',
+    ],
+    test_suite='nose.collector',
 )
