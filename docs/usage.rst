@@ -27,6 +27,6 @@ extracted to their own ``.crd`` files by providing the ``-u`` or ``--unpack``
 switch at the command line like so.::
   librator -u ./cards allcards.lbr
 
-In either direction the ``librator`` command will work fine for partial
-updates. This means that if you want to remove a card from the card files and
-the database then the database library itself will need to be deleted.
+In unpacking the ``librator`` command will work fine for partial
+updates. However when packing a library only the cards in the specified card
+directory will be packaged.
