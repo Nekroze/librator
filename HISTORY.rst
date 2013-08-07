@@ -3,6 +3,11 @@
 History
 -------
 
+v0.1.3
+++++++
+
+- Switched unpacking to use library generator retrieve_all
+
 v0.1.2
 ++++++
 
