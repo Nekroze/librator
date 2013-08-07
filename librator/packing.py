@@ -33,6 +33,6 @@ def unpack(library, carddir):
     lib = Library(library)
     cardpath = pjoin(carddir, "{0}.crd")
 
-    for card in lib.retrieve_all():
+    for card in lib.retreive_all():
         with open(cardpath.format(code), 'w') as cardfile:
             yaml.dump(card.save(), cardfile, default_flow_style=False)
