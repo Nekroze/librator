@@ -38,7 +38,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'pyyaml>=3.10',
-        'librarian>=0.2.5',
+        'librarian>=0.2.6',
     ],
     license="MIT",
     zip_safe=False,
