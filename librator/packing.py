@@ -27,7 +27,7 @@ def pack(library, carddir):
 
 def unpack(library, carddir):
     """Unpack all cards from the given library into carddir as .crd files."""
-    if not os.path.exists(carddir):
+    if not os.path.exists(carddir) or not os.path.isdir(carddir):
         os.makedirs(carddir)
 
     lib = Library(library)
